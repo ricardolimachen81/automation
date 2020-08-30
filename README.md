@@ -2,7 +2,7 @@
 
 <h2>Critério da utilização da linguagem:</h2>
 	<ul>
-		<li>A linguagem java foi utilizada, pois trata de uma das mais utilizadas no mercado, fácil acesso de estudo e de vários fóruns existentes para pesquisas.</li>
+		<li>A linguagem java foi utilizada, pois trata de uma das mais utilizadas no mercado, fácil acesso a estudo e a vários fóruns para pesquisas.</li>
 	</ul>
  <h2>Framework utilizado:</h2>
  	<ul>
@@ -20,5 +20,5 @@
  		<li>3 - Procurar a classe de execução chamada "Runner": workspace/automacao/src/test/java/com/cucumber/runner/Runner.java</li>
  		<li>4 - No "Cucumber Options" alterar para a TAG de sua ecolha</li>
  		<li>5 - Executar a Classe "Runner"</li>
- 		<li>6 - Será criada uma pasta no formato Ev_DDMMAAHHMMSS contendo o resultado da execução: workspace/automacao/Evidencias</li>
+ 		<li>6 - Será criada uma pasta no formato "Ev_DDMMAAHHMMSS" contendo o resultado da execução: workspace/automacao/Evidencias</li>
  	</ul>
