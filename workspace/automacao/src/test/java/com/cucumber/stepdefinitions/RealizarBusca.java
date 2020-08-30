@@ -6,7 +6,7 @@ import com.project.objects.ObjectMaps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class SegundoSteps {
+public class RealizarBusca {
 	
 	@Given("abrir o browser na \"([^\"]*)\"$")
 	public void abrir_o_browser_na(String url) throws Throwable {
