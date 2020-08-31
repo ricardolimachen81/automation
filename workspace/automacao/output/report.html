@@ -34,6 +34,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -47,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 30, 2020 01:37:45 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Aug 31, 2020 12:25:27 AM</span>
 				</a>
 			</li>
 			<li>
@@ -73,6 +74,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
@@ -90,7 +92,9 @@
 					<li><a href='#'>@RealizarBuscaSucesso</a></li>
 					<li><a href='#'>@all</a></li>
 					<li><a href='#'>@RealizarBuscaInexistente</a></li>
-					<li><a href='#'>@RealizarBuscaSemProduto</a></li>
+					<li><a href='#'>@SelecionaProduto</a></li>
+					<li><a href='#'>@SelecionarProdutoCategoria</a></li>
+					<li><a href='#'>@SelecionarProdutoBusca</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -138,10 +142,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>8</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='91.304%'><span class='strong'>21</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>4</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='4.348%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='4.348%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -153,10 +157,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='40%'><span class='strong'>8</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='46.667%'><span class='strong'>21</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='60%'>12</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='2.222%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='51.111%'>23</span> others
 				</div>
 			</div>
 		</div>
@@ -171,17 +175,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf skip' status='skip' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Realizar Busca</span>
-						<span class='test-time'>Aug 30, 2020 01:37:46 AM</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='test-time'>Aug 31, 2020 12:25:27 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 30, 2020 01:37:46 AM</span>
-	<span class='label end-time'>Aug 30, 2020 01:38:46 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 0s+708ms</span>
+	<span class='label start-time'>Aug 31, 2020 12:25:27 AM</span>
+	<span class='label end-time'>Aug 31, 2020 12:26:33 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 5s+645ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -194,7 +198,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Scenario Outline: Realizar Busca de um produto no site da Magazine luiza</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 28s+265ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 23s+854ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -209,8 +213,8 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:37:46 AM</td>
-													<td class='step-details'><table><tr><td>url</td><td>produto</td></tr><tr><td>https://magazineluiza.com.br</td><td>iPhone 11 Apple 64GB Preto 6,1” 12MP - iOS</td></tr></table></td>
+													<td class='timestamp'>12:25:27 AM</td>
+													<td class='step-details'><table><tr><td>url</td><td>produto</td></tr><tr><td>https://magazineluiza.com.br</td><td>Grampeador Pneumático MTX - 10 a 22mm 574209</td></tr></table></td>
 												</tr>
 										</tbody>
 									</table>
@@ -221,7 +225,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Scenario: Realizar Busca de um produto no site da Magazine luiza</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 28s+256ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 23s+845ms</span>
 								<span class='category label white-text'>@RealizarBuscaSucesso</span>
 								<span class='category label white-text'>@RealizarBusca</span>
 								<span class='category label white-text'>@all</span>
@@ -231,7 +235,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Given abrir o browser na "https://magazineluiza.com.br"</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+401ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 9s+820ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -246,27 +250,27 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:37:59 AM</td>
+													<td class='timestamp'>12:25:35 AM</td>
 													<td class='step-details'>Abrir Url</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:00 AM</td>
+													<td class='timestamp'>12:25:37 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013759.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013759.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013759.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002535.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002535.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002535.png'></li>
 										</ul>
 								</div>
 						</div>
 				</li>
 				<li class='node level-3 leaf pass' status='pass' test-id='5'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>And realizar pesquisa do "iPhone 11 Apple 64GB Preto 6,1” 12MP - iOS"</h5>
+						<h5 class='node-name'>And realizar pesquisa do "Grampeador Pneumático MTX - 10 a 22mm 574209"</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+435ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+465ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -281,29 +285,29 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:06 AM</td>
+													<td class='timestamp'>12:25:43 AM</td>
 													<td class='step-details'>Inserir Produto</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:06 AM</td>
+													<td class='timestamp'>12:25:43 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013800.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013800.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013800.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013802.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013802.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013802.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013806.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013806.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013806.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002537.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002537.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002537.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002539.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002539.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002539.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002543.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002543.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002543.png'></li>
 										</ul>
 								</div>
 						</div>
 				</li>
 				<li class='node level-3 leaf pass' status='pass' test-id='6'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Then valido que o "iPhone 11 Apple 64GB Preto 6,1” 12MP - iOS" retornou com sucesso</h5>
+						<h5 class='node-name'>Then valido que o "Grampeador Pneumático MTX - 10 a 22mm 574209" retornou com sucesso</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+277ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+367ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -318,19 +322,19 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:08 AM</td>
+													<td class='timestamp'>12:25:45 AM</td>
 													<td class='step-details'>Produto Validado com sucesso</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:08 AM</td>
+													<td class='timestamp'>12:25:45 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013806.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013806.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013806.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013807.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013807.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013807.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002543.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002543.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002543.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002544.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002544.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002544.png'></li>
 										</ul>
 								</div>
 						</div>
@@ -339,7 +343,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+138ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+187ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -354,18 +358,18 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:14 AM</td>
+													<td class='timestamp'>12:25:51 AM</td>
 													<td class='step-details'>Fechar Browser</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:14 AM</td>
+													<td class='timestamp'>12:25:51 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013813.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013813.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013813.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002550.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002550.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002550.png'></li>
 										</ul>
 								</div>
 						</div>
@@ -374,11 +378,11 @@
 				</li>
 						</ul>
 				</li>
-				<li class='node level-1  skip' status='skip' test-id='8'>
+				<li class='node level-1  fail' status='fail' test-id='8'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 19s+369ms</span>
+						<span class='test-status right fail'>fail</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 41s+786ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -393,19 +397,19 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:14 AM</td>
-													<td class='step-details'><table><tr><td>url</td><td>produto</td></tr><tr><td>https://magazineluiza.com.br</td><td>controle remoto do  papai noel</td></tr></table></td>
+													<td class='timestamp'>12:25:51 AM</td>
+													<td class='step-details'><table><tr><td>url</td><td>produto</td></tr><tr><td>https://magazineluiza.com.br</td><td>controle remoto do  papai noel</td></tr><tr><td>https://magazineluiza.com.br</td><td>Grampeador Pneumático MTX - 10 a 22mm 574209</td></tr></table></td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2  skip' status='skip' test-id='9'>
+				<li class='node level-2  pass' status='pass' test-id='9'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 19s+369ms</span>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 24s+85ms</span>
 								<span class='category label white-text'>@RealizarBuscaInexistente</span>
 								<span class='category label white-text'>@RealizarBusca</span>
 								<span class='category label white-text'>@all</span>
@@ -415,7 +419,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Given abrir o browser na "https://magazineluiza.com.br"</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 12s+773ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 9s+108ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -430,18 +434,18 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:26 AM</td>
+													<td class='timestamp'>12:25:59 AM</td>
 													<td class='step-details'>Abrir Url</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:27 AM</td>
+													<td class='timestamp'>12:26:00 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013826.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013826.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013826.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002559.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002559.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002559.png'></li>
 										</ul>
 								</div>
 						</div>
@@ -450,7 +454,7 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>And realizar pesquisa do "controle remoto do  papai noel"</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+590ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 7s+58ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -465,27 +469,222 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:33 AM</td>
+													<td class='timestamp'>12:26:07 AM</td>
 													<td class='step-details'>Inserir Produto</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:33 AM</td>
+													<td class='timestamp'>12:26:07 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013827.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013827.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013827.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013828.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013828.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013828.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013833.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013833.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013833.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002600.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002600.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002600.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002602.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002602.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002602.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002606.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002606.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002606.png'></li>
 										</ul>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf skip' status='skip' test-id='12'>
+				<li class='node level-3 leaf pass' status='pass' test-id='12'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Then valido mensagem de produto inexistente</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+675ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:09 AM</td>
+													<td class='step-details'>Mensagem de Produto inexistente validada com sucesso</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:26:09 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002607.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002607.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002607.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002608.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002608.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002608.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+240ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:15 AM</td>
+													<td class='step-details'>Fechar Browser</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:26:15 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002614.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002614.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002614.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-2  fail' status='fail' test-id='14'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</h5>
+						<span class='test-status right fail'>fail</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 17s+700ms</span>
+								<span class='category label white-text'>@RealizarBuscaInexistente</span>
+								<span class='category label white-text'>@RealizarBusca</span>
+								<span class='category label white-text'>@all</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-3 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Given abrir o browser na "https://magazineluiza.com.br"</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 9s+854ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:24 AM</td>
+													<td class='step-details'>Abrir Url</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:26:25 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002624.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002624.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002624.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And realizar pesquisa do "Grampeador Pneumático MTX - 10 a 22mm 574209"</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+19ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:31 AM</td>
+													<td class='step-details'>Inserir Produto</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:26:31 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002625.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002625.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002625.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002627.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002627.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002627.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002630.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002630.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002630.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf fail' status='fail' test-id='17'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Then valido mensagem de produto inexistente</h5>
+						<span class='test-status right fail'>fail</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+819ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:32 AM</td>
+													<td class='step-details'>Erro ao Validar Mensagem de Produto inexistente</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>12:26:33 AM</td>
+													<td class='step-details'><pre>java.lang.RuntimeException: Erro ao Validar Mensagem de Produto inexistente
+	at com.project.objects.CadastroObjectMaps.validaMensagemProdutoInexistente(CadastroObjectMaps.java:82)
+	at com.cucumber.stepdefinitions.RealizarBusca.valido_mensagem_de_produto_inexistente(RealizarBusca.java:37)
+	at ✽.Then valido mensagem de produto inexistente(RealizarBusca.feature:37)
+</pre></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002631.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002631.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002631.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002631.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002631.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002631.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf skip' status='skip' test-id='18'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
 						<span class='test-status right skip'>skip</span>
 						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+2ms</span>
 					</div>
@@ -502,34 +701,7 @@
 										<tbody>
 												<tr class='log' status='skip'>
 													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>1:38:33 AM</td>
-													<td class='step-details'>undefined</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-3 leaf skip' status='skip' test-id='13'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+1ms</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>1:38:33 AM</td>
+													<td class='timestamp'>12:26:33 AM</td>
 													<td class='step-details'>skipped</td>
 												</tr>
 										</tbody>
@@ -541,11 +713,35 @@
 				</li>
 						</ul>
 				</li>
-				<li class='node level-1  skip' status='skip' test-id='14'>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Selecionar Produto</span>
+						<span class='test-time'>Aug 31, 2020 12:26:33 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 31, 2020 12:26:33 AM</span>
+	<span class='label end-time'>Aug 31, 2020 12:27:45 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 12s+191ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>@SelecionaProduto</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1  pass' status='pass' test-id='20'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 13s+71ms</span>
+						<h5 class='node-name'>Scenario Outline: Realizar Seleção de um produto no site do magazine luiza</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 32s+461ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -560,29 +756,29 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:33 AM</td>
-													<td class='step-details'><table><tr><td>url</td><td>produto</td></tr><tr><td>https://magazineluiza.com.br</td><td></td></tr></table></td>
+													<td class='timestamp'>12:26:33 AM</td>
+													<td class='step-details'><table><tr><td>url</td><td>categoria</td></tr><tr><td>https://magazineluiza.com.br</td><td>Ferramentas</td></tr></table></td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2  skip' status='skip' test-id='15'>
+				<li class='node level-2  pass' status='pass' test-id='21'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 13s+71ms</span>
-								<span class='category label white-text'>@RealizarBuscaSemProduto</span>
-								<span class='category label white-text'>@RealizarBusca</span>
+						<h5 class='node-name'>Scenario: Realizar Seleção de um produto no site do magazine luiza</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 32s+460ms</span>
+								<span class='category label white-text'>@SelecionaProduto</span>
+								<span class='category label white-text'>@SelecionarProdutoCategoria</span>
 								<span class='category label white-text'>@all</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-3 leaf pass' status='pass' test-id='16'>
+				<li class='node level-3 leaf pass' status='pass' test-id='22'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Given abrir o browser na "https://magazineluiza.com.br"</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 9s+367ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 9s+132ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -597,27 +793,27 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:41 AM</td>
+													<td class='timestamp'>12:26:41 AM</td>
 													<td class='step-details'>Abrir Url</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:43 AM</td>
+													<td class='timestamp'>12:26:42 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013841.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013841.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013841.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002641.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002641.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002641.png'></li>
 										</ul>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf pass' status='pass' test-id='17'>
+				<li class='node level-3 leaf pass' status='pass' test-id='23'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>And realizar pesquisa do ""</h5>
+						<h5 class='node-name'>And realizar pesquisa da categoria "Ferramentas"</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 3s+700ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 8s+568ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -632,29 +828,30 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:38:46 AM</td>
-													<td class='step-details'>Inserir Produto</td>
+													<td class='timestamp'>12:26:50 AM</td>
+													<td class='step-details'>Pesquisa realizada com sucesso</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:38:46 AM</td>
+													<td class='timestamp'>12:26:50 AM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 										<ul class='screenshots'>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013843.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013843.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013843.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013844.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013844.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013844.png'></li>
-												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013845.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013845.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_30082020013746////Prints//30082020013845.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002642.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002642.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002642.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002643.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002643.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002643.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002649.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002649.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002649.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002650.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002650.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002650.png'></li>
 										</ul>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf skip' status='skip' test-id='18'>
+				<li class='node level-3 leaf pass' status='pass' test-id='24'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Then valido que a tela nao foi alterada</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+						<h5 class='node-name'>And seleciono o primeiro produto listado</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+860ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -667,21 +864,142 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>1:38:46 AM</td>
-													<td class='step-details'>undefined</td>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:57 AM</td>
+													<td class='step-details'>Primeiro produto selecionado com sucesso</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:26:57 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002650.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002650.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002650.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002656.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002656.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002656.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='25'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Then valido a tela apos selecao do produto</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+479ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:26:59 AM</td>
+													<td class='step-details'>Tela de produto validada com sucesso</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:26:59 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002657.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002657.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002657.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002658.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002658.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002658.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='26'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+416ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:05 AM</td>
+													<td class='step-details'>Fechar Browser</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:05 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002704.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002704.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002704.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='27'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Scenario Outline: Realizar Seleção de um produto no site do magazine luiza</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 39s+730ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:05 AM</td>
+													<td class='step-details'><table><tr><td>url</td><td>produto</td></tr><tr><td>https://magazineluiza.com.br</td><td>Grampeador Pneumático MTX - 10 a 22mm 574209</td></tr></table></td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
-				</li>
-				<li class='node level-3 leaf skip' status='skip' test-id='19'>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2  pass' status='pass' test-id='28'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
-						<span class='test-status right skip'>skip</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+						<h5 class='node-name'>Scenario: Realizar Seleção de um produto no site do magazine luiza</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 39s+729ms</span>
+								<span class='category label white-text'>@SelecionarProdutoBusca</span>
+								<span class='category label white-text'>@SelecionaProduto</span>
+								<span class='category label white-text'>@all</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-3 leaf pass' status='pass' test-id='29'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Given abrir o browser na "https://magazineluiza.com.br"</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 20s+201ms</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -694,13 +1012,200 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>1:38:46 AM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:24 AM</td>
+													<td class='step-details'>Abrir Url</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:25 AM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002724.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002724.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002724.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='30'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And realizar pesquisa do "Grampeador Pneumático MTX - 10 a 22mm 574209"</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 5s+907ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:31 AM</td>
+													<td class='step-details'>Inserir Produto</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:31 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002725.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002725.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002725.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002727.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002727.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002727.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002730.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002730.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002730.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='31'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Then valido que o "Grampeador Pneumático MTX - 10 a 22mm 574209" retornou com sucesso</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+316ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:32 AM</td>
+													<td class='step-details'>Produto Validado com sucesso</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:32 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002731.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002731.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002731.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002732.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002732.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002732.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='32'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And seleciono o produto listado "Grampeador Pneumático MTX - 10 a 22mm 574209"</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 4s+302ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:37 AM</td>
+													<td class='step-details'>Produto listado selecionado com sucesso</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:37 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002733.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002733.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002733.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='33'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Then valido a tela apos selecao do produto</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+588ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:38 AM</td>
+													<td class='step-details'>Tela de produto validada com sucesso</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:38 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002737.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002737.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002737.png'></li>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002738.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002738.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002738.png'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf pass' status='pass' test-id='34'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>And Browser Fechou com sucesso</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 6s+412ms</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:27:45 AM</td>
+													<td class='step-details'>Fechar Browser</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:27:45 AM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002743.png' width='10%' src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002743.png' data-src='/Users/ricardo.chen/automation/workspace/automacao//Evidencias//Ev_31082020002527////Prints//31082020002743.png'></li>
+										</ul>
 								</div>
 						</div>
 				</li>
@@ -765,15 +1270,15 @@
 					<div class='category-heading'>
 						<span class='category-name'>@RealizarBusca</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
-							<span class='label others'>3</span>
+							<span class='label pass'>2</span>
+							<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
 							
-							<span class='label yellow darken-2 white-text'>Others: 3</span>
 						</div>
 					
 						<div class='category-tests'>
@@ -787,24 +1292,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 30, 2020 01:37:46 AM</td>
+										<td>Aug 31, 2020 12:25:27 AM</td>
 										<td class='linked' test-id='1'>Realizar Busca</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Aug 30, 2020 01:37:46 AM</td>
+										<td>Aug 31, 2020 12:25:27 AM</td>
 										<td class='linked' test-id='3'>Realizar Busca.Scenario Outline: Realizar Busca de um produto no site da Magazine luiza.Scenario: Realizar Busca de um produto no site da Magazine luiza</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Aug 30, 2020 01:38:14 AM</td>
+										<td>Aug 31, 2020 12:25:51 AM</td>
 										<td class='linked' test-id='9'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Aug 30, 2020 01:38:33 AM</td>
-										<td class='linked' test-id='15'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td>Aug 31, 2020 12:26:15 AM</td>
+										<td class='linked' test-id='14'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -836,7 +1341,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 30, 2020 01:37:46 AM</td>
+										<td>Aug 31, 2020 12:25:27 AM</td>
 										<td class='linked' test-id='3'>Realizar Busca.Scenario Outline: Realizar Busca de um produto no site da Magazine luiza.Scenario: Realizar Busca de um produto no site da Magazine luiza</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -849,15 +1354,15 @@
 					<div class='category-heading'>
 						<span class='category-name'>@all</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
-							<span class='label others'>2</span>
+							<span class='label pass'>4</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 4</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
-							<span class='label yellow darken-2 white-text'>Others: 2</span>
 						</div>
 					
 						<div class='category-tests'>
@@ -871,19 +1376,29 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 30, 2020 01:37:46 AM</td>
+										<td>Aug 31, 2020 12:25:27 AM</td>
 										<td class='linked' test-id='3'>Realizar Busca.Scenario Outline: Realizar Busca de um produto no site da Magazine luiza.Scenario: Realizar Busca de um produto no site da Magazine luiza</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Aug 30, 2020 01:38:14 AM</td>
+										<td>Aug 31, 2020 12:25:51 AM</td>
 										<td class='linked' test-id='9'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Aug 30, 2020 01:38:33 AM</td>
-										<td class='linked' test-id='15'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td>Aug 31, 2020 12:26:15 AM</td>
+										<td class='linked' test-id='14'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Aug 31, 2020 12:26:33 AM</td>
+										<td class='linked' test-id='21'>Selecionar Produto.Scenario Outline: Realizar Seleção de um produto no site do magazine luiza.Scenario: Realizar Seleção de um produto no site do magazine luiza</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 31, 2020 12:27:05 AM</td>
+										<td class='linked' test-id='28'>Selecionar Produto.Scenario Outline: Realizar Seleção de um produto no site do magazine luiza.Scenario: Realizar Seleção de um produto no site do magazine luiza</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -894,14 +1409,15 @@
 					<div class='category-heading'>
 						<span class='category-name'>@RealizarBuscaInexistente</span>
 						<span class='category-status right'>
-							<span class='label others'>1</span>
+							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
-							
-							<span class='label yellow darken-2 white-text'>Others: 1</span>
 						</div>
 					
 						<div class='category-tests'>
@@ -915,9 +1431,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 30, 2020 01:38:14 AM</td>
+										<td>Aug 31, 2020 12:25:51 AM</td>
 										<td class='linked' test-id='9'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 31, 2020 12:26:15 AM</td>
+										<td class='linked' test-id='14'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -926,16 +1447,16 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@RealizarBuscaSemProduto</span>
+						<span class='category-name'>@SelecionaProduto</span>
 						<span class='category-status right'>
-							<span class='label others'>1</span>
+							<span class='label pass'>3</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
 							
 							
-							<span class='label yellow darken-2 white-text'>Others: 1</span>
 						</div>
 					
 						<div class='category-tests'>
@@ -949,9 +1470,87 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 30, 2020 01:38:33 AM</td>
-										<td class='linked' test-id='15'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td>Aug 31, 2020 12:26:33 AM</td>
+										<td class='linked' test-id='19'>Selecionar Produto</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 31, 2020 12:26:33 AM</td>
+										<td class='linked' test-id='21'>Selecionar Produto.Scenario Outline: Realizar Seleção de um produto no site do magazine luiza.Scenario: Realizar Seleção de um produto no site do magazine luiza</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 31, 2020 12:27:05 AM</td>
+										<td class='linked' test-id='28'>Selecionar Produto.Scenario Outline: Realizar Seleção de um produto no site do magazine luiza.Scenario: Realizar Seleção de um produto no site do magazine luiza</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SelecionarProdutoCategoria</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 31, 2020 12:26:33 AM</td>
+										<td class='linked' test-id='21'>Selecionar Produto.Scenario Outline: Realizar Seleção de um produto no site do magazine luiza.Scenario: Realizar Seleção de um produto no site do magazine luiza</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SelecionarProdutoBusca</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 31, 2020 12:27:05 AM</td>
+										<td class='linked' test-id='28'>Selecionar Produto.Scenario Outline: Realizar Seleção de um produto no site do magazine luiza.Scenario: Realizar Seleção de um produto no site do magazine luiza</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -970,6 +1569,71 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.RuntimeException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Aug 31, 2020 12:26:31 AM</td>
+                                                        <td class='linked' test-id='17'>Realizar Busca.Scenario Outline: Realizar Busca de um produto inexistente no site da Magazine luiza.Scenario: Realizar Busca de um produto inexistente no site da Magazine luiza.Then valido mensagem de produto inexistente</td>
+                                                        <td><pre><pre>java.lang.RuntimeException: Erro ao Validar Mensagem de Produto inexistente
+	at com.project.objects.CadastroObjectMaps.validaMensagemProdutoInexistente(CadastroObjectMaps.java:82)
+	at com.cucumber.stepdefinitions.RealizarBusca.valido_mensagem_de_produto_inexistente(RealizarBusca.java:37)
+	at ✽.Then valido mensagem de produto inexistente(RealizarBusca.feature:37)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -979,31 +1643,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>23</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>20</div>
+					<div class='panel-lead'>45</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 30, 2020 01:37:45 AM</div>
+					<div class='panel-lead'>Aug 31, 2020 12:25:27 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 30, 2020 01:38:46 AM</div>
+			 		<div class='panel-lead'>Aug 31, 2020 12:27:45 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>60,783ms</div>
+					<div class='panel-lead'>137,914ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1019,9 +1683,9 @@
 						</tr>
 						<tr>
 							<td>@RealizarBusca</td>
-							<td>1</td>
+							<td>2</td>
+							<td>2</td>
 							<td>0</td>
-							<td>3</td>
 						</tr>
 						<tr>
 							<td>@RealizarBuscaSucesso</td>
@@ -1031,21 +1695,33 @@
 						</tr>
 						<tr>
 							<td>@all</td>
+							<td>4</td>
 							<td>1</td>
 							<td>0</td>
-							<td>2</td>
 						</tr>
 						<tr>
 							<td>@RealizarBuscaInexistente</td>
-							<td>0</td>
-							<td>0</td>
 							<td>1</td>
+							<td>1</td>
+							<td>0</td>
 						</tr>
 						<tr>
-							<td>@RealizarBuscaSemProduto</td>
+							<td>@SelecionaProduto</td>
+							<td>3</td>
 							<td>0</td>
 							<td>0</td>
+						</tr>
+						<tr>
+							<td>@SelecionarProdutoCategoria</td>
 							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@SelecionarProdutoBusca</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
 						</tr>
 					</table>
 				</div>
@@ -1060,22 +1736,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 8,
-				failParent: 0,
+				passParent: 21,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 4,
-				exceptionsParent: 4,
+				skipParent: 1,
+				exceptionsParent: 2,
 				
-				passChild: 8,
-				failChild: 0,
+				passChild: 21,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 4,
-				infoChild: 8,
-				exceptionsChild: 4,
+				skipChild: 1,
+				infoChild: 22,
+				exceptionsChild: 2,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

@@ -36,7 +36,7 @@ public class Runner {
 		Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
 		Reporter.setSystemInfo("user", System.getProperty("user.name"));
 		Reporter.setSystemInfo("os", "Mac OSX");
-		Reporter.setTestRunnerOutput("Team CT&T");
+		Reporter.setTestRunnerOutput("Team CI&T");
 		Functions.copy(Constants.CaminhoOrigemReport, Constants.CaminhoDestinoReport, true);
 		driver.quit();
 	}

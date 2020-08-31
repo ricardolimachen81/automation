@@ -31,4 +31,9 @@ public class RealizarBusca {
 		objCadastro.fecharBrowser();
 	}
 
+	@Then("^valido mensagem de produto inexistente$")
+	public void valido_mensagem_de_produto_inexistente() throws Throwable {
+		CadastroObjectMaps objCadastro = new CadastroObjectMaps();
+		objCadastro.validaMensagemProdutoInexistente();
+	}
 }

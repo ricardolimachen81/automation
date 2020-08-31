@@ -28,6 +28,14 @@ public class Constants {
 	public static String Tag_Div = "Div";
 	public static String Tag_Input = "Input";
 	public static String Tag_H2 = "h2";
+	public static String Tag_P = "p";
+	public static String Tag_H1 = "h1";
+	public static String Tag_SPAN = "span";
+	public static String Tag_H3 = "h3";
+	public static String Tag_IMG = "img";
+	
+	
+	
 	
 	
 	//Delays
