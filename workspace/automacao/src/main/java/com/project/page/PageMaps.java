@@ -1,4 +1,4 @@
-package com.project.objects;
+package com.project.page;
 
 import java.io.IOException;
 
@@ -14,6 +14,7 @@ public class ObjectMaps{
 	private WebDriver driver;
 		
 	public void logar(String url) throws IOException {
+		//Alterar para o browser ser iniciado dinamicamente
 		BrowserFactory.instanciaBrowser("CHROME");
 		driver = Constants.WebDriver;
 		driver.get(url);

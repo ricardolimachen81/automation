@@ -1,6 +1,5 @@
 package com.project.settings;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,6 +15,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -93,7 +93,10 @@ public class Functions {
     public static WebDriver getWebDriverChrome() {
 
 		System.setProperty(Constants.CONST_CHROMEDRIVER_PROPERTY, Constants.CONST_CHROMEDRIVER_PATH);
-		return new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		//options.addArguments("start-maximized");
+		options.addArguments("headless");
+		return new ChromeDriver(options);
 	}
 
 	public static WebDriver getWebDriverFirefox() {
