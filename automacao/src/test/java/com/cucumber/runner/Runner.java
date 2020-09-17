@@ -18,7 +18,8 @@ import cucumber.api.junit.Cucumber;
 	features = { "src/test/resources/features" }, 
 	tags = { "@RealizarBuscaInexistente" }, 
 	glue = {"com.cucumber.stepdefinitions", "com.cucumber.runner" }, 
-	plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html" })
+	plugin = {"pretty", "com.cucumber.listener.ExtentCucumberFormatter:output/report.html",
+	"json:output/Cucumber.json"}, monochrome = true)
 
 public class Runner {
 	//private WebDriver driver = Constants.WebDriver;
