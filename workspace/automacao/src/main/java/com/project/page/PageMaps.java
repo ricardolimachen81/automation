@@ -9,7 +9,7 @@ import com.project.settings.BrowserFactory;
 import com.project.settings.Constants;
 import com.project.settings.Functions;
 
-public class ObjectMaps{
+public class PageMaps{
 	
 	private WebDriver driver;
 		

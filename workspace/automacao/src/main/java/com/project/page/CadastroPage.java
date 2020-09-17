@@ -18,6 +18,7 @@ public class CadastroPage {
 		Functions.printScreen();
 		driver = Constants.WebDriver;
 		driver.quit();
+		Functions.copy(Constants.CaminhoOrigemReport, Constants.CaminhoDestinoReport, true);
 		Reporter.addStepLog("Fechar Browser");
 	}
 	
@@ -61,9 +62,9 @@ public class CadastroPage {
 
 	public void validaMensagemProdutoInexistente() throws IOException {
 		final ObjectFunctions obj = new ObjectFunctions();
-		String mensagemProdutoInexistente = "Nenhum resultado encontrado para a consulta ";
+		final String mensagemProdutoInexistente = "Nenhum resultado encontrado para a consulta ";
 		try {
-			boolean result = false;
+			final boolean result = false;
 			driver = Constants.WebDriver;
 			Functions.printScreen();
 			// result = obj.compareElementText(driver, Constants.Tag_P, mensagemProdutoInexistente);
@@ -76,7 +77,7 @@ public class CadastroPage {
 			// 	driver.quit();
 			// 	throw new RuntimeException("Erro ao Validar Mensagem de Produto inexistente");
 			// }
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			e.printStackTrace();
 			Functions.printScreen();
 			Reporter.addStepLog("Erro ao Validar Mensagem de Produto inexistente");
@@ -85,9 +86,9 @@ public class CadastroPage {
 		}
 	}
 
-	public void realizarPesquisaCategoria(String categoria) throws IOException {
+	public void realizarPesquisaCategoria(final String categoria) throws IOException {
 		final ObjectFunctions obj = new ObjectFunctions();
-		String menu = "Todos os departamentos";
+		final String menu = "Todos os departamentos";
 		try {
 			Functions.printScreen();
 			obj.returnXpathText(driver, Constants.Tag_SPAN, menu).click();
@@ -97,7 +98,7 @@ public class CadastroPage {
 			obj.returnXpathText(driver, Constants.Tag_H1, categoria);
 			Functions.printScreen();
 			Reporter.addStepLog("Pesquisa realizada com sucesso");
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			Reporter.addStepLog("Erro ao realizar Pesquisa por categoria");
 			driver.quit();
 			throw new RuntimeException("Erro ao realizar Pesquisa por categoria");
@@ -111,7 +112,7 @@ public class CadastroPage {
 			obj.clicElementJavaScriptArrayElement(driver, Constants.Tag_H3);
 			Functions.printScreen();
 			Reporter.addStepLog("Primeiro produto selecionado com sucesso");
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			Reporter.addStepLog("Erro ao selecionar primeiro produto");
 			driver.quit();
 			throw new RuntimeException("Erro ao selecionar primeiro produto");
@@ -121,28 +122,28 @@ public class CadastroPage {
 
 	public void validaTelaSelecaoProduto(){
 		final ObjectFunctions obj = new ObjectFunctions();
-		String mensagem1 = "Avaliar produto";
-		String mensagem2 = "Mais formas de pagamento";
+		final String mensagem1 = "Avaliar produto";
+		final String mensagem2 = "Mais formas de pagamento";
 		try {
 			Functions.printScreen();
 			obj.returnXpathText(driver, Constants.Tag_A, mensagem1);
 			obj.returnXpathText(driver, Constants.Tag_A, mensagem2);
 			Functions.printScreen();
 			Reporter.addStepLog("Tela de produto validada com sucesso");
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			Reporter.addStepLog("Erro validar tela de produto");
 			driver.quit();
 			throw new RuntimeException("Erro validar tela de produto");
 		}
 	}
 
-	public void selecionoProdutoListado(String produto){
+	public void selecionoProdutoListado(final String produto){
 		final ObjectFunctions obj = new ObjectFunctions();
 		try {
 			obj.clickElementJavaScriptByXpath(driver, Constants.Tag_H2, produto);
 			Functions.printScreen();
 			Reporter.addStepLog("Produto listado selecionado com sucesso");
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			Reporter.addStepLog("Erro ao selecionar produto listado");
 			driver.quit();
 			throw new RuntimeException("Erro ao selecionar produto listado");
