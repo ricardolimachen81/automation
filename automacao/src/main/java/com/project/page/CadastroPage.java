@@ -10,9 +10,13 @@ import com.project.settings.Functions;
 import com.project.utils.ObjectFunctions;
 
 public class CadastroPage {
+
+	//Elements
+	String fieldSearch = "inpHeaderSearch";
+	String btnSearch = "btnHeaderSearch";
 	
 	private WebDriver driver = Constants.WebDriver;
-
+	
 	public void fecharBrowser() throws IOException, InterruptedException {
 		Thread.sleep(Constants.Delay_Low);
 		Functions.printScreen();
@@ -27,9 +31,9 @@ public class CadastroPage {
 		try {
 			driver = Constants.WebDriver;
 			Functions.printScreen();
-			obj.returnId(driver, "inpHeaderSearch").sendKeys(produto);
+			obj.returnId(driver, fieldSearch).sendKeys(produto);
 			Functions.printScreen();
-			obj.returnId(driver, "btnHeaderSearch").click();
+			obj.returnId(driver, btnSearch).click();
 			Functions.printScreen();
 			Reporter.addStepLog("Inserir Produto");
 		} catch (final Exception e) {
