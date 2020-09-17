@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 	features = { "src/test/resources/features" }, 
-	tags = { "@RealizarBuscaInexistente" }, 
+	tags = { "@all" }, 
 	glue = {"com.cucumber.stepdefinitions", "com.cucumber.runner" }, 
 	plugin = {"pretty", "com.cucumber.listener.ExtentCucumberFormatter:output/report.html",
 	"json:output/Cucumber.json"}, monochrome = true)
