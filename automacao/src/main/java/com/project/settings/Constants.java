@@ -52,7 +52,7 @@ public class Constants {
 	public static final String CONST_MOZILLADRIVER_PATH =   System.getProperty("user.dir") +"/driver/geckodriver.exe";
 	//Chrome
 	public static final String CONST_CHROMEDRIVER_PROPERTY = "webdriver.chrome.driver";
-	public static final String CONST_CHROMEDRIVER_PATH = System.getProperty("user.dir") +"/driver/chromedriver";
+	public static final String CONST_CHROMEDRIVER_PATH = System.getProperty("user.dir") +"/driver/chromedriver.exe";
 	public static String ScenarioName;
 	
 	

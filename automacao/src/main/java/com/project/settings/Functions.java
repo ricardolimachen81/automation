@@ -92,6 +92,7 @@ public class Functions {
     
     public static WebDriver getWebDriverChrome() {
 
+		System.setProperty("webdriver.chrome.silentOutput", "true");
 		System.setProperty(Constants.CONST_CHROMEDRIVER_PROPERTY, Constants.CONST_CHROMEDRIVER_PATH);
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("start-maximized");
